@@ -139,7 +139,4 @@ function deleteEntry(id) {
 function escapeHtml(text) {
     const div = document.createElement("div");
     div.textContent = text;
-    return div.innerHTML;
-}
-
-renderEntries();
+    return div.innerH
