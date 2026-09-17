@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Ausbildung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Meine Ausbildung</h1>
+            <p>Dein digitales Ausbildungstagebuch</p>
+        </div>
+        <button class="menu-button">☰</button>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Guten Morgen 👋</h2>
+            <p>Was hast du heute gemacht?</p>
+        </section>
+
+        <section class="quick-actions">
+            <button class="voice-button" id="voiceButton">
+                🎤
+                <span>Eintrag sprechen</span>
+            </button>
+            <button class="manual-button" id="manualButton">
+                ✍️
+                <span>Eintrag schreiben</span>
+            </button>
+        </section>
+
+        <section class="entries-section">
+            <div class="section-header">
+                <h2>Meine Einträge</h2>
+                <span id="entryCount">0 Einträge</span>
+            </div>
+            <div id="entriesList">
+                <div class="empty-state" id="emptyState">
+                    <div>📖</div>
+                    <h3>Noch keine Einträge</h3>
+                    <p>Dein erster Ausbildungseintrag wartet auf dich.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal hidden" id="entryModal">
+        <div class="modal-content">
+            <button class="close-button" id="closeModal">×</button>
+            <h2>Neuer Eintrag</h2>
+
+            <label for="entryTitle">Tätigkeit</label>
+            <input type="text" id="entryTitle" placeholder="z. B. Maschine gewartet">
+
+            <label for="entryDescription">Beschreibung</label>
+            <textarea id="entryDescription" placeholder="Was hast du heute gemacht?"></textarea>
+
+            <label for="entryLearned">Gelernt</label>
+            <textarea id="entryLearned" placeholder="Was hast du dabei gelernt?"></textarea>
+
+            <label for="entryCategory">Kategorie</label>
+            <select id="entryCategory">
+                <option value="Praxis">🔧 Praxis</option>
+                <option value="Berufsschule">📚 Berufsschule</option>
+                <option value="Software">💻 Software</option>
+                <option value="Werkzeuge">🛠️ Werkzeuge</option>
+                <option value="Kundenkontakt">🤝 Kundenkontakt</option>
+                <option value="Gelernt">💡 Gelernt</option>
+                <option value="Fragen">❓ Fragen</option>
+            </select>
+
+            <button class="save-button" id="saveButton">💾 Eintrag speichern</button>
+        </div>
+    </div>
+
+    <nav class="bottom-navigation">
+        <button class="nav-item active">🏠<span>Start</span></button>
+        <button class="nav-item">📅<span>Kalender</span></button>
+        <button class="nav-item">🔎<span>Suche</span></button>
+        <button class="nav-item">⚙️<span>Mehr</span></button>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
